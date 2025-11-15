@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ficha Personal, Axel Rubenacker</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://db.onlinewebfonts.com/c/5c341966f9f84cbbd9adf87f76bd4b25?family=south-park-studios" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header>
+  <div class="container header-row">
+    <h1 class="sp-title reveal">Ficha Personal, Axel Rubenacker</h1>
+
+    <nav id="site-nav" class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="Cv.html">Curriculum</a></li>
+        <li><a href="Proyectos.html">Proyectos</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="container contacto-page">
+    <h2 class="sp-title reveal">¡Contactate Conmigo!</h2>
+
+    <!-- UN SOLO FORM -->
+    <form id="contacto-form" class="form-grid">
+      <!-- Nombre -->
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" />
+        <p class="help-text">Ingresá tu nombre completo.</p>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" />
+        <p class="help-text">Usá un correo válido para que pueda responderte, debe tener @.</p>
+      </div>
+
+      <!-- Mensaje -->
+      <div class="form-group full-width">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje"></textarea>
+        <p class="help-text">Contame brevemente en qué te puedo ayudar.</p>
+      </div>
+
+      <!-- Botón centrado -->
+      <div class="form-group full-width">
+        <button type="button" id="btnEnviar" class="submit-button">Enviar</button>
+      </div>
+
+      <!-- Mensaje de estado -->
+      <p id="formStatus" class="server-message"></p>
+    </form>
+  </main>
+
+  <footer class="footer">
+  <div class="container footer-row">
+    <div class="footer-info">
+      <p>Axel Rubenacker</p>
+      <p>axelrubenacker24@gmail.com</p>
+      <p>12345678</p>
+    </div>
+
+    <!-- Botón de modo oscuro bien al extremo derecho -->
+    <button id="btnColorSitio" class="btn-modo">Cambiar color del sitio</button>
+  </div>
+</footer>
+</body>
+</html>
