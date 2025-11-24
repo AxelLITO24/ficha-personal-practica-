@@ -1,25 +1,33 @@
 // Todo el código se ejecuta cuando el documento está listo (jQuery ready)
 $(document).ready(function () {
-  // ------------ TEMA 1: FORMULARIO Y HEURÍSTICAS ------------
-
-  // 1) Referencias a los campos y al mensaje de estado
+ // 1) Referencias a los campos y al mensaje de estado
   var $nombre = $("#nombre");
+  var $edad = $("#edad"); // Nuevo campo
   var $email = $("#email");
-  var $mensaje = $("#mensaje");
+  var $comentario = $("#comentario"); // ID actualizado a comentario
   var $formStatus = $("#formStatus");
 
   // 2) Feedback inmediato: focus / blur
-  $("#nombre, #email, #mensaje").focus(function () {
+  $("#nombre, #edad, #email, #comentario").focus(function () {
     $(this).css("background-color", "#e0f7fa");
   });
 
-  $("#nombre, #email, #mensaje").blur(function () {
+  $("#nombre, #edad, #email, #comentario").blur(function () {
     $(this).css("background-color", "white");
   });
 
   // 3) Validación al hacer clic en Enviar
   $("#btnEnviar").click(function () {
     var hayError = false;
+    var errores = []; // Para mostrar mensajes debajo de los campos si hay errores
+    
+    // Reset de bordes y mensajes antes de validar
+    $nombre.css("border-color", "#cccccc");
+    $edad.css("border-color", "#cccccc");
+    $email.css("border-color", "#cccccc");
+    $comentario.css("border-color", "#cccccc");
+    $formStatus.text(""); // Limpiar mensaje de estado
+
 
     // Reset de bordes antes de validar
     $nombre.css("border-color", "#cccccc");
@@ -115,4 +123,5 @@ $("#increaseFont").on("click", function () {
     localStorage.setItem("fontSize", next);
   }
 });
+
 
